@@ -1,0 +1,17 @@
+0115, 5, 830, 846, 16, 1
+(Name Hikitori, Cycle Time, Time Begin, Time Finish, Loading Time, Status)
+
+Kode Hikitori:
+0115 = Hikitori F
+0116 = Hikitori G
+0117 = Hikitori H
+
+
+
+
+id, line, target, aktual, loading_time, efisiensi, delay, status, cycle_time, time_trouble
+
+msg.topic = "INSERT INTO table_monitoring_montiv_transit(id, line, target, aktual, loading_time, efisiensi, delay, status, cycle_time, time_trouble) values(null, '" + line + "', '" + target + "', '" + aktual + "', '" + loading_time + "', '" + efisiensi + "', '" + delay + "','" + status + "', '" + cycle_time + "', '" + time_trouble + "');"
+
+CREATE TABLE table_monitoring_montiv_transit (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(20), target VARCHAR(20), aktual VARCHAR(20), loading_time VARCHAR(20), efisiensi VARCHAR(20), delay VARCHAR(20), status VARCHAR(20), cycle_time VARCHAR(20), time_trouble VARCHAR(20), time_quality VARCHAR(20), andon VARCHAR(20), date VARCHAR(20), time VARCHAR(20))
+

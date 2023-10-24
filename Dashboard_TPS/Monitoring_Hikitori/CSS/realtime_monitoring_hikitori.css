@@ -1,0 +1,54 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(38, 135, 204);
+    padding: 5px;
+}
+h1{
+    color: aliceblue;
+}
+h2{
+    margin-left: 25px;
+}
+table, th, td{
+    border: 1px solid;
+}
+table{
+    width: 100%;
+    position: relative;
+}
+th{
+    height: 35px;
+    background-color: rgb(96, 228, 70);
+    font-size: large;
+    position: sticky;
+    top: 0;
+}
+td{
+    height: 25px;
+}
+
+/* baru */
+.table-monitoring{
+    height: 510px;
+    overflow-y: auto;
+    padding: 0px 0px 0px 0px;
+    border: 1px solid black;
+    margin: 10px;
+}
+.table-monitoring table, th {
+    position: sticky;
+}
+input{
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
