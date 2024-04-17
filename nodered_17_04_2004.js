@@ -15,7 +15,6 @@ var andon
 var line_name
 var pg
 
-
 line_id = msg.payload[0]
 name_product = msg.payload[1]
 target = msg.payload[2]
@@ -28,10 +27,6 @@ status_montiv = msg.payload[8]
 time_trouble = msg.payload[9]
 time_trouble_quality = msg.payload[10]
 andon = msg.payload[11]
-
-
-
-
 
 
 if (line_id == "1") {
