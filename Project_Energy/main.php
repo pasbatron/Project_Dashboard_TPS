@@ -1,6 +1,6 @@
 <?php include 'getConnect.php'; ?>
 <?php include 'getTemplateBase.php'; ?>
-
+<?php include 'getRecap.php'; ?>
 
 <html lang="en">
 <head>
@@ -177,37 +177,72 @@
         <?php header_table(); ?>
         <?php  
             // DPCHAB
-            $dataGetDataDPCHABPM200 = getDataDPCHABPM200();
-            $dataGetDataDPCHABPM200Date = getDataDPCHABPM200Date();
-            $dataGetDataDPCHABPM200time = getDataDPCHABPM200Time();
-            $dataGetDataDPCHABPM220 = getDataDPCHABPM220();
-            $dataGetDataDPCHABPM220Date = getDataDPCHABPM220Date();
-            $dataGetDataDPCHABPM220time = getDataDPCHABPM220Time();
-            
+            $dataGetDataDPCHABPM200Shift1Awal = getDataDPCHABPM200Shift1Awal();
+            $dataGetDataDPCHABPM200DateShift1Awal = getDataDPCHABPM200DateShift1Awal();
+            $dataGetDataDPCHABPM200timeShift1Awal = getDataDPCHABPM200TimeShift1Awal();
+            $dataGetDataDPCHABPM220Shift1Awal = getDataDPCHABPM220Shift1Awal();
+            $dataGetDataDPCHABPM220DateShift1Awal = getDataDPCHABPM220DateShift1Awal();
+            $dataGetDataDPCHABPM220timeShift1Awal = getDataDPCHABPM220TimeShift1Awal();
+            $dataGetDataDPCHCDPM200Shift1Awal = getDataDPCHCDPM200Shift1Awal();
+            $dataGetDataDPCHCDPM200DateShift1Awal = getDataDPCHCDPM200DateShift1Awal();
+            $dataGetDataDPCHCDPM200timeShift1Awal = getDataDPCHCDPM200TimeShift1Awal();
+            $dataGetDataDPCHCDPM220Shift1Awal = getDataDPCHCDPM220Shift1Awal();
+            $dataGetDataDPCHCDPM220DateShift1Awal = getDataDPCHCDPM220DateShift1Awal();
+            $dataGetDataDPCHCDPM220timeShift1Awal = getDataDPCHCDPM220TimeShift1Awal();
 
-            $dataGetDataDPCHCDPM200 = getDataDPCHCDPM200();
-            $dataGetDataDPCHCDPM200Date = getDataDPCHCDPM200Date();
-            $dataGetDataDPCHCDPM200time = getDataDPCHCDPM200Time();
-            $dataGetDataDPCHCDPM220 = getDataDPCHCDPM220();
-            $dataGetDataDPCHCDPM220Date = getDataDPCHCDPM220Date();
-            $dataGetDataDPCHCDPM220time = getDataDPCHCDPM220Time();
+
+            $dataGetDataDPCHABPM200Shift1Akhir = getDataDPCHABPM200Shift1Akhir();
+            $dataGetDataDPCHABPM200DateShift1Akhir = getDataDPCHABPM200DateShift1Akhir();
+            $dataGetDataDPCHABPM200timeShift1Akhir = getDataDPCHABPM200TimeShift1Akhir();
+            $dataGetDataDPCHABPM220Shift1Akhir = getDataDPCHABPM220Shift1Akhir();
+            $dataGetDataDPCHABPM220DateShift1Akhir = getDataDPCHABPM220DateShift1Akhir();
+            $dataGetDataDPCHABPM220timeShift1Akhir = getDataDPCHABPM220TimeShift1Akhir();
+            $dataGetDataDPCHCDPM200Shift1Akhir = getDataDPCHCDPM200Shift1Akhir();
+            $dataGetDataDPCHCDPM200DateShift1Akhir = getDataDPCHCDPM200DateShift1Akhir();
+            $dataGetDataDPCHCDPM200timeShift1Akhir = getDataDPCHCDPM200TimeShift1Akhir();
+            $dataGetDataDPCHCDPM220Shift1Akhir = getDataDPCHCDPM220Shift1Akhir();
+            $dataGetDataDPCHCDPM220DateShift1Akhir = getDataDPCHCDPM220DateShift1Akhir();
+            $dataGetDataDPCHCDPM220timeShift1Akhir = getDataDPCHCDPM220TimeShift1Akhir();  
             
+            
+    // ---------------------------------------------------------------------------------
+
+            // $dateObject = date_create($dataGetDataDPCHABPM200DateShift1Awal);
+            // $formattedDate = date_format($dateObject, 'Y-m-d');
+            // $formattedDateYesterdar = date('Y-m-d', strtotime('-1 day'));
+            // $dateString = $dataGetDataDPCHABPM200DateShift1Awal;
+            // $parsedData = explode("-", $dateString);
+
+
+
+            // $parsedYear = $parsedData[0];
+            // $parsedMonth = $parsedData[1];
+            // $parsedDay = $parsedData[2];
+
+
+            // echo $formattedDateYesterdar;
+            // echo $formattedDate;
+
+
+
             echo "<tr>";
-            echo "<td> $dataGetDataDPCHABPM200Date</td>";
+            echo "<td> $dataGetDataDPCHABPM200DateShift1Awal </td>";
+            echo "<td> $dataGetDataDPCHABPM200timeShift1Awal </td>";
             echo "<td>DP CAMP HOUSING A&B</td>";
-            echo "<td>$dataGetDataDPCHABPM200</td>";
+            echo "<td>$dataGetDataDPCHABPM200Shift1Awal</td>";
 
 
             echo "<td>Generated Data 2</td>";
             echo "<td>Generated Data 3</td>";
             echo "<td>Generated Data 4</td>";
-            echo "</tr>";
+            echo "</td>";
 
 
             echo "<tr>";
-            echo "<td> $dataGetDataDPCHCDPM200Date</td>";
+            echo "<td> $dataGetDataDPCHABPM220DateShift1Awal </td>";
+            echo "<td> $dataGetDataDPCHABPM220timeShift1Awal </td>";
             echo "<td>DP CAMP HOUSING C&D</td>";
-            echo "<td>$dataGetDataDPCHCDPM200</td>";
+            echo "<td>$dataGetDataDPCHABPM220Shift1Awal</td>";
 
 
             echo "<td>Generated Data 2</td>";
