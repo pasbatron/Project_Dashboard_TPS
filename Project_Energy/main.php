@@ -1,6 +1,9 @@
-<?php include 'getConnect.php'; ?>
-<?php include 'getTemplateBase.php'; ?>
-<?php include 'getRecap.php'; ?>
+<?php 
+
+include 'getConnect.php'; 
+include 'getRecap.php';
+
+?>
 
 <html lang="en">
 <head>
@@ -10,7 +13,6 @@
     <link rel="stylesheet" href="src/style.css">
     <title>Monitoring Energy</title>
 </head>
-
 
 <body>
 
@@ -42,14 +44,14 @@
                             echo "<tr>
                                     <td rowspan='3'>DISTRIBUTION PANEL ALL OTICS</td>
                                     <td>{$row['name_power_meter']}</td>
-                                    <td>{$row['date']}</td>
-                                    <td>{$row['time']}</td>
+                                    <td>{$row['data_date']}</td>
+                                    <td>{$row['data_time']}</td>
                                 </tr>";
                             $data_kwh_meter_a = (int)$row['data_kwh_meter'];
                         }
                     } 
 
-                    $sql = "SELECT * FROM table_all_energy WHERE name_power_meter = 'POWER METER 200V' and time <= '07:10:00' ORDER BY id DESC LIMIT 1";
+                    $sql = "SELECT * FROM table_all_energy WHERE name_power_meter = 'POWER METER 200V' and data_time <= '07:10:00' ORDER BY id DESC LIMIT 1";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
@@ -64,7 +66,7 @@
                                 $data_kwh_meter_c = (int)$row['data_kwh_meter'];
                         }
                     } 
-                    $sql = "SELECT * FROM table_all_energy WHERE name_power_meter = 'POWER METER 200V' and time < '19:50:00' ORDER BY id DESC LIMIT 1";
+                    $sql = "SELECT * FROM table_all_energy WHERE name_power_meter = 'POWER METER 200V' and data_time < '19:50:00' ORDER BY id DESC LIMIT 1";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
@@ -81,14 +83,14 @@
                         while($row = $result->fetch_assoc()) {
                             echo "<tr>
                                     <td>{$row['name_power_meter']}</td>
-                                    <td>{$row['date']}</td>
-                                    <td>{$row['time']}</td>
+                                    <td>{$row['data_date']}</td>
+                                    <td>{$row['data_time']}</td>
                                 </tr>";
                                 $data_kwh_meter_e = (int)$row['data_kwh_meter'];
                         }
                     } 
 
-                    $sql = "SELECT * FROM table_all_energy WHERE name_power_meter = 'POWER METER 220V' and time < '07:10:00' ORDER BY id DESC LIMIT 1";
+                    $sql = "SELECT * FROM table_all_energy WHERE name_power_meter = 'POWER METER 220V' and data_time < '07:10:00' ORDER BY id DESC LIMIT 1";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
@@ -103,7 +105,7 @@
                                 $data_kwh_meter_g = (int)$row['data_kwh_meter'];
                         }
                     } 
-                    $sql = "SELECT * FROM table_all_energy WHERE name_power_meter = 'POWER METER 220V' and time < '19:50:00' ORDER BY id DESC LIMIT 1";
+                    $sql = "SELECT * FROM table_all_energy WHERE name_power_meter = 'POWER METER 220V' and data_time < '19:50:00' ORDER BY id DESC LIMIT 1";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
@@ -177,77 +179,31 @@
         <?php header_table(); ?>
         <?php  
             // DPCHAB
-            $dataGetDataDPCHABPM200Shift1Awal = getDataDPCHABPM200Shift1Awal();
-            $dataGetDataDPCHABPM200DateShift1Awal = getDataDPCHABPM200DateShift1Awal();
-            $dataGetDataDPCHABPM200timeShift1Awal = getDataDPCHABPM200TimeShift1Awal();
-            $dataGetDataDPCHABPM220Shift1Awal = getDataDPCHABPM220Shift1Awal();
-            $dataGetDataDPCHABPM220DateShift1Awal = getDataDPCHABPM220DateShift1Awal();
-            $dataGetDataDPCHABPM220timeShift1Awal = getDataDPCHABPM220TimeShift1Awal();
-            $dataGetDataDPCHCDPM200Shift1Awal = getDataDPCHCDPM200Shift1Awal();
-            $dataGetDataDPCHCDPM200DateShift1Awal = getDataDPCHCDPM200DateShift1Awal();
-            $dataGetDataDPCHCDPM200timeShift1Awal = getDataDPCHCDPM200TimeShift1Awal();
-            $dataGetDataDPCHCDPM220Shift1Awal = getDataDPCHCDPM220Shift1Awal();
-            $dataGetDataDPCHCDPM220DateShift1Awal = getDataDPCHCDPM220DateShift1Awal();
-            $dataGetDataDPCHCDPM220timeShift1Awal = getDataDPCHCDPM220TimeShift1Awal();
 
-
-            $dataGetDataDPCHABPM200Shift1Akhir = getDataDPCHABPM200Shift1Akhir();
-            $dataGetDataDPCHABPM200DateShift1Akhir = getDataDPCHABPM200DateShift1Akhir();
-            $dataGetDataDPCHABPM200timeShift1Akhir = getDataDPCHABPM200TimeShift1Akhir();
-            $dataGetDataDPCHABPM220Shift1Akhir = getDataDPCHABPM220Shift1Akhir();
-            $dataGetDataDPCHABPM220DateShift1Akhir = getDataDPCHABPM220DateShift1Akhir();
-            $dataGetDataDPCHABPM220timeShift1Akhir = getDataDPCHABPM220TimeShift1Akhir();
-            $dataGetDataDPCHCDPM200Shift1Akhir = getDataDPCHCDPM200Shift1Akhir();
-            $dataGetDataDPCHCDPM200DateShift1Akhir = getDataDPCHCDPM200DateShift1Akhir();
-            $dataGetDataDPCHCDPM200timeShift1Akhir = getDataDPCHCDPM200TimeShift1Akhir();
-            $dataGetDataDPCHCDPM220Shift1Akhir = getDataDPCHCDPM220Shift1Akhir();
-            $dataGetDataDPCHCDPM220DateShift1Akhir = getDataDPCHCDPM220DateShift1Akhir();
-            $dataGetDataDPCHCDPM220timeShift1Akhir = getDataDPCHCDPM220TimeShift1Akhir();  
+ 
             
             
     // ---------------------------------------------------------------------------------
 
-            // $dateObject = date_create($dataGetDataDPCHABPM200DateShift1Awal);
-            // $formattedDate = date_format($dateObject, 'Y-m-d');
-            // $formattedDateYesterdar = date('Y-m-d', strtotime('-1 day'));
-            // $dateString = $dataGetDataDPCHABPM200DateShift1Awal;
-            // $parsedData = explode("-", $dateString);
 
-
-
-            // $parsedYear = $parsedData[0];
-            // $parsedMonth = $parsedData[1];
-            // $parsedDay = $parsedData[2];
-
-
-            // echo $formattedDateYesterdar;
-            // echo $formattedDate;
-
-
-
+        
             echo "<tr>";
-            echo "<td> $dataGetDataDPCHABPM200DateShift1Awal </td>";
-            echo "<td> $dataGetDataDPCHABPM200timeShift1Awal </td>";
+            echo "<td>$dataDPCHABPM200AreaBDate</td>";
             echo "<td>DP CAMP HOUSING A&B</td>";
-            echo "<td>$dataGetDataDPCHABPM200Shift1Awal</td>";
-
-
-            echo "<td>Generated Data 2</td>";
-            echo "<td>Generated Data 3</td>";
-            echo "<td>Generated Data 4</td>";
-            echo "</td>";
+            echo "<td>$kwhtotalDPCHABPM200shift1</td>";
+            echo "<td>$kwhtotalDPCHABPM220shift1</td>";
+            echo "<td>$kwhtotalDPCHABPM200shift2</td>";
+            echo "<td>$kwhtotalDPCHABPM220shift2</td>";
+            echo "</tr>";
 
 
             echo "<tr>";
-            echo "<td> $dataGetDataDPCHABPM220DateShift1Awal </td>";
-            echo "<td> $dataGetDataDPCHABPM220timeShift1Awal </td>";
+            echo "<td>$dataDPCHABPM200AreaBDate</td>";
             echo "<td>DP CAMP HOUSING C&D</td>";
-            echo "<td>$dataGetDataDPCHABPM220Shift1Awal</td>";
-
-
-            echo "<td>Generated Data 2</td>";
-            echo "<td>Generated Data 3</td>";
-            echo "<td>Generated Data 4</td>";
+            echo "<td>$kwhtotalDPCHCDPM200shift1</td>";
+            echo "<td>$kwhtotalDPCHCDPM220shift1</td>";
+            echo "<td>$kwhtotalDPCHCDPM200shift2</td>";
+            echo "<td>$kwhtotalDPCHCDPM220shift2</td>";
             echo "</tr>";
         ?>
         <?php echo "</table>"; ?>
@@ -257,8 +213,16 @@
     <h4>DP = DISTRIBUTION PANEL</h4>
 
 
-    <script src="src/script.js"></script>
 
-    
+
+
+
+
+
+
+
+
+
+    <script src="src/script.js"></script>
 </body>
 </html>
