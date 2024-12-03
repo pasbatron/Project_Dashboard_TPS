@@ -1,0 +1,42 @@
+.ItemDua {
+    background-color: #f1f8e9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.panel {
+    display: flex;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+.indicator {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.indicator span {
+    font-size: 15px;
+    color: #333;
+}
+.light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+.light.red {
+    background-color: #ff4d4f;
+}
+.light.green {
+    background-color: #52c41a;
+}
+

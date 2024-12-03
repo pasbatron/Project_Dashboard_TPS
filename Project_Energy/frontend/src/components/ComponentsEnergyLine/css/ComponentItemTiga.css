@@ -1,0 +1,59 @@
+.ItemTiga {
+    background-color: #f1f8e9;
+    border-radius: 25px;
+    padding: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Box Styles */
+.box {
+background-color: #ffffff;
+border: 1px solid #ddd;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 10px;
+}
+
+.box-header {
+font-size: 15px;
+font-weight: bold;
+padding: 5px;
+border-bottom: 1px solid #ddd;
+background-color: #153a75;
+color: white;
+border-radius: 5px;
+}
+
+.box-body {
+padding: 5px;
+color: #666;
+}
+
+
+
+.box:hover {
+    background-color: #d9edf7; /* Warna latar belakang saat hover */
+    transform: translateY(-5px); /* Sedikit mengangkat elemen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+}
+
+
+.box-header {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.box-body {
+    font-size: 1em;
+    color: #555;
+}
