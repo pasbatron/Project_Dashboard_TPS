@@ -1424,7 +1424,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4410,
+        "x": 4010,
         "y": 180,
         "wires": []
     },
@@ -1465,7 +1465,7 @@
         "propout": "payload",
         "object": "msg",
         "objectout": "msg",
-        "x": 4250,
+        "x": 3850,
         "y": 180,
         "wires": [
             [
@@ -1486,7 +1486,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4270,
+        "x": 3870,
         "y": 140,
         "wires": []
     },
@@ -1502,7 +1502,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4470,
+        "x": 4070,
         "y": 300,
         "wires": [
             []
@@ -1545,7 +1545,7 @@
         "propout": "payload",
         "object": "msg",
         "objectout": "msg",
-        "x": 4270,
+        "x": 3870,
         "y": 220,
         "wires": [
             [
@@ -1565,7 +1565,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4680,
+        "x": 4280,
         "y": 300,
         "wires": []
     },
@@ -1581,7 +1581,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4420,
+        "x": 4020,
         "y": 220,
         "wires": [
             [
@@ -1614,7 +1614,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4450,
+        "x": 4050,
         "y": 380,
         "wires": [
             [
@@ -1636,7 +1636,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4500,
+        "x": 4100,
         "y": 340,
         "wires": [
             [
@@ -1656,7 +1656,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4430,
+        "x": 4030,
         "y": 460,
         "wires": [
             []
@@ -1674,7 +1674,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4430,
+        "x": 4030,
         "y": 500,
         "wires": [
             []
@@ -1692,7 +1692,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4430,
+        "x": 4030,
         "y": 540,
         "wires": [
             []
@@ -1710,7 +1710,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4440,
+        "x": 4040,
         "y": 580,
         "wires": [
             [
@@ -1730,7 +1730,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4420,
+        "x": 4020,
         "y": 660,
         "wires": [
             []
@@ -1748,7 +1748,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4440,
+        "x": 4040,
         "y": 920,
         "wires": [
             [
@@ -1768,7 +1768,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4420,
+        "x": 4020,
         "y": 700,
         "wires": [
             []
@@ -1786,7 +1786,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4420,
+        "x": 4020,
         "y": 740,
         "wires": [
             []
@@ -1804,7 +1804,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4420,
+        "x": 4020,
         "y": 780,
         "wires": [
             []
@@ -1822,7 +1822,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4420,
+        "x": 4020,
         "y": 820,
         "wires": [
             []
@@ -1840,7 +1840,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4740,
+        "x": 4340,
         "y": 400,
         "wires": [
             [
@@ -1865,7 +1865,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 4970,
+        "x": 4570,
         "y": 340,
         "wires": []
     },
@@ -1886,7 +1886,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 4910,
+        "x": 4510,
         "y": 300,
         "wires": []
     },
@@ -1907,7 +1907,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 4660,
+        "x": 4260,
         "y": 580,
         "wires": []
     },
@@ -1928,7 +1928,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 4650,
+        "x": 4250,
         "y": 920,
         "wires": []
     },
@@ -1970,7 +1970,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 4960,
+        "x": 4560,
         "y": 380,
         "wires": [
             []
@@ -2049,7 +2049,7 @@
         "type": "function",
         "z": "7c7044f25de04ebc",
         "name": "Create SQL Query pm 220",
-        "func": "\nmsg.topic = \"SELECT * FROM tb_total_kwh_pm220 ORDER BY id DESC LIMIT 1\";\nreturn msg;\n\n",
+        "func": "\nmsg.topic = \"SELECT * FROM tb_total_kwh_pm220 ORDER BY idPrimary DESC LIMIT 1\";\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2203,7 +2203,7 @@
         "type": "function",
         "z": "7c7044f25de04ebc",
         "name": "Create SQL Query pm kub",
-        "func": "\nmsg.topic = \"SELECT * FROM tb_total_kwh_kubikal ORDER BY id DESC LIMIT 1\";\nreturn msg;\n\n",
+        "func": "\nmsg.topic = \"SELECT * FROM tb_total_kwh_kubikal ORDER BY idPrimary DESC LIMIT 1\";\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2256,7 +2256,7 @@
         "type": "function",
         "z": "7c7044f25de04ebc",
         "name": "Create SQL Query pm 200",
-        "func": "\nmsg.topic = \"SELECT * FROM tb_total_kwh_pm200 ORDER BY id DESC LIMIT 1\";\nreturn msg;\n\n",
+        "func": "\nmsg.topic = \"SELECT * FROM tb_total_kwh_pm200 ORDER BY idPrimary DESC LIMIT 1\";\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
