@@ -1,6 +1,5 @@
 
 
-
 // setting frontend energy
 npm install react-chartjs-2 chart.js @mui/material
 npm install react-bootstrap bootstrap
@@ -11,10 +10,8 @@ npm install recharts
 npm install lucide-react
 npm install react-router-dom
 
-
-
-
-
-
 //LoRa
 https://osoyoo.com/it/2018/07/26/osoyoo-lora-tutorial-how-to-use-the-uart-lora-module-with-arduino/
+
+//setting database
+GRANT ALL PRIVILEGES ON *.* TO 'otics_tps'@'localhost' IDENTIFIED BY 'sukatno_ali' WITH GRANT OPTION;
