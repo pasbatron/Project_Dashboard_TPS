@@ -1,0 +1,17 @@
+npm install react-chartjs-2 chart.js @mui/material
+npm install react-bootstrap bootstrap
+npm install react-icons
+npm install axios
+npm install moment-timezone
+npm install recharts
+npm install lucide-react
+npm install react-router-dom
+
+
+npm install react-chartjs-2 chart.js @mui/material react-bootstrap bootstrap react-icons axios moment-timezone recharts lucide-react react-router-dom
+
+
+
+
+
+
